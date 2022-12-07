@@ -21,7 +21,7 @@ double DiffMaxMinArray(double[] Array)  //Посчитывает сумму не
         if (Buf > Max) Max = Buf;
         if (Buf < Min) Min = Buf;
     }
-    return Max - Min;
+    return Math.Round(Max - Min, 2);
 }
 
 try
