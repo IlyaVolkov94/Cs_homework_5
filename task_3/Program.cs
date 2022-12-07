@@ -5,7 +5,7 @@ double[] FillRandomArray(int Arg)  //Создает произвольно за�
     double[] Array = new double[Arg];
     for (int i = 0; i < Arg; i++)
     {
-        Array[i] = new Random().Next(-10, 11);
+        Array[i] = Math.Round(new Random().NextDouble() * 10, 2);
         Console.Write(Array[i] + " ");
     }
     Console.WriteLine("");
@@ -14,14 +14,14 @@ double[] FillRandomArray(int Arg)  //Создает произвольно за�
 
 double DiffMaxMinArray(double[] Array)  //Посчитывает сумму нечетных чисел
 {
-    double Max =0;
-    double Min =0;
+    double Max = Array[0];
+    double Min = Array[0];
     foreach (double Buf in Array)
     {
         if (Buf > Max) Max = Buf;
         if (Buf < Min) Min = Buf;
     }
-    return Max-Min;
+    return Max - Min;
 }
 
 try
