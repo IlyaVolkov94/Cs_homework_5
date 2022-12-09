@@ -12,12 +12,12 @@ int[] FillRandomArray(int Arg)  //Создает произвольно запо
     return Array;
 }
 
-int SumNotEven(int[] Array)  //Посчитывает сумму нечетных чисел
+int SumNotEven(int[] Array)  //Посчитывает сумму чисел на нечетных позициях
 {
     int Sum = 0;
-    foreach (int Buf in Array)
+    for (int i = 0; i < Array.Length; i += 2)
     {
-        if (Buf % 2 != 0) Sum += Buf;
+        Sum += Array[i];
     }
     return Sum;
 }
@@ -29,7 +29,7 @@ try
     int[] Array = new int[Size];
     Array = FillRandomArray(Size);
     int Result = SumNotEven(Array);
-    Console.WriteLine("Количество четных чисел в массиве: " + Result);
+    Console.WriteLine("Сумма чисел на нечетных позициях: " + Result);
 }
 
 catch
