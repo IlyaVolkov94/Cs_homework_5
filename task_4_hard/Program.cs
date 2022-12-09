@@ -16,7 +16,7 @@ int[] FillRandomArray(int Arg)  //Создает произвольно запо
 
 void SortArray(int[] Array)
 {
-    int[] SortArray = new int[Array.Length];
+    int[] SortArray = new int[Array.Length];    //Удаляй наверное
     SortArray = Array;
     for (int i = 0; i < SortArray.Length; i++)
     {
