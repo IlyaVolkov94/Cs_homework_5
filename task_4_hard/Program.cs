@@ -16,20 +16,18 @@ int[] FillRandomArray(int Arg)  //Создает произвольно запо
 
 void SortArray(int[] Array)
 {
-    int[] SortArray = new int[Array.Length];    //Удаляй наверное
-    SortArray = Array;
-    for (int i = 0; i < SortArray.Length; i++)
+    for (int i = 0; i < Array.Length; i++)
     {
-        for (int j = i; j < SortArray.Length; j++)
+        for (int j = i; j < Array.Length; j++)
         {
-            if (SortArray[i] < SortArray[j])
+            if (Array[i] < Array[j])
             {
-                int Buf = SortArray[i];
-                SortArray[i] = SortArray[j];
-                SortArray[j] = Buf;
+                int Buf = Array[i];
+                Array[i] = Array[j];
+                Array[j] = Buf;
             }
         }
-        Console.Write(SortArray[i] + " ");
+        Console.Write(Array[i] + " ");
     }
 }
 
