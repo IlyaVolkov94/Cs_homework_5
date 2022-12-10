@@ -11,7 +11,7 @@ int[] FillRandomArray(int value)
     int j = 0;
     for (int i = 0; i < value; i++)
     {
-        while (j < i)
+        while (j < i)   //Проверяем рандомное число на наличие его в массиве
         {
             if (array[j] == temp)
             {
@@ -25,7 +25,7 @@ int[] FillRandomArray(int value)
     return array;
 }
 
-int[] SortArray(int[] array)
+int[] SortArray(int[] array)    //Сортировка выбором
 {
     int[] sortArray = new int[array.Length];
     for (int i = 0; i < array.Length; i++)
@@ -55,11 +55,11 @@ void PrintArray(int[] array)
     Console.WriteLine("");
 }
 
-int[] MixArray(int[] array)
+int[] MixArray(int[] array) //Перемешивание на основе двух уникальных раномных массивов которые содержать в себе индексы. Подумал, что так будет очень рандомно.
 {
     int arraySize = array.Length;
-    int[] firstIndexes = FillRandomArray(arraySize);
-    int[] secondIndexes = FillRandomArray(arraySize);
+    int[] firstIndexes = FillRandomArray(arraySize);    //Содержит индексы сортированного массива
+    int[] secondIndexes = FillRandomArray(arraySize);   //Содержит индексы конечного массива
     int[] mixArray = new int[arraySize];
     for (int i = 0; i < arraySize; i++)
     {
