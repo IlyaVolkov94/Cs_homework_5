@@ -1,9 +1,9 @@
 ﻿// Задайте одномерный массив, заполненный случайными числами. Найдите сумму элементов, стоящих на нечётных позициях.
 
-int[] FillRandomArray(int Arg)  //Создает произвольно заполненный массив
+int[] FillRandomArray(int arg)
 {
-    int[] Array = new int[Arg];
-    for (int i = 0; i < Arg; i++)
+    int[] Array = new int[arg];
+    for (int i = 0; i < arg; i++)
     {
         Array[i] = new Random().Next(-10, 11);
         Console.Write(Array[i] + " ");
@@ -12,12 +12,12 @@ int[] FillRandomArray(int Arg)  //Создает произвольно запо
     return Array;
 }
 
-int SumNotEven(int[] Array)  //Посчитывает сумму чисел на нечетных позициях
+int SumNotEven(int[] array)
 {
     int Sum = 0;
-    for (int i = 0; i < Array.Length; i += 2)
+    for (int i = 0; i < array.Length; i += 2)
     {
-        Sum += Array[i];
+        Sum += array[i];
     }
     return Sum;
 }
@@ -25,11 +25,11 @@ int SumNotEven(int[] Array)  //Посчитывает сумму чисел на
 try
 {
     Console.WriteLine("Введите размер массива");
-    int Size = Convert.ToInt32(Console.ReadLine());
-    int[] Array = new int[Size];
-    Array = FillRandomArray(Size);
-    int Result = SumNotEven(Array);
-    Console.WriteLine("Сумма чисел на нечетных позициях: " + Result);
+    int arraySize = Convert.ToInt32(Console.ReadLine());
+    int[] array = new int[arraySize];
+    array = FillRandomArray(arraySize);
+    int result = SumNotEven(array);
+    Console.WriteLine("Сумма чисел на нечетных позициях: " + result);
 }
 
 catch

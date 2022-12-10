@@ -1,37 +1,37 @@
 ﻿//  Задайте массив вещественных чисел. Найдите разницу между максимальным и минимальным элементов массива.
 
-double[] FillRandomArray(int Arg)
+double[] FillRandomArray(int arg)
 {
-    double[] Array = new double[Arg];
-    for (int i = 0; i < Arg; i++)
+    double[] array = new double[arg];
+    for (int i = 0; i < arg; i++)
     {
-        Array[i] = Math.Round(new Random().NextDouble() * 10, 2);
-        Console.Write(Array[i] + " ");
+        array[i] = Math.Round(new Random().NextDouble() * 10, 2);
+        Console.Write(array[i] + " ");
     }
     Console.WriteLine("");
-    return Array;
+    return array;
 }
 
-double DiffMaxMinArray(double[] Array)
+double DiffMaxMinArray(double[] array)
 {
-    double Max = Array[0];
-    double Min = Array[0];
-    foreach (double Buf in Array)
+    double max = array[0];
+    double min = array[0];
+    foreach (double buf in array)
     {
-        if (Buf > Max) Max = Buf;
-        if (Buf < Min) Min = Buf;
+        if (buf > max) max = buf;
+        if (buf < min) min = buf;
     }
-    return Math.Round(Max - Min, 2);
+    return Math.Round(max - min, 2);
 }
 
 try
 {
     Console.WriteLine("Введите размер массива");
-    int Size = Convert.ToInt32(Console.ReadLine());
-    double[] Array = new double[Size];
-    Array = FillRandomArray(Size);
-    double Result = DiffMaxMinArray(Array);
-    Console.WriteLine("Разница между максимальным и минимальным элементом массива: " + Result);
+    int arraySize = Convert.ToInt32(Console.ReadLine());
+    double[] array = new double[arraySize];
+    array = FillRandomArray(arraySize);
+    double result = DiffMaxMinArray(array);
+    Console.WriteLine("Разница между максимальным и минимальным элементом массива: " + result);
 }
 
 catch

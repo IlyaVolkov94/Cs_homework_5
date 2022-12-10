@@ -4,14 +4,14 @@
 
 int[] FillRandomArray(int value)
 {
-    int[] Array = new int[value];
+    int[] array = new int[value];
     for (int i = 0; i < value; i++)
     {
-        Array[i] = new Random().Next(-10, 11);
-        Console.Write(Array[i] + " ");
+        array[i] = new Random().Next(-10, 11);
+        Console.Write(array[i] + " ");
     }
     Console.WriteLine("");
-    return Array;
+    return array;
 }
 
 int[] SortArray(int[] array)
