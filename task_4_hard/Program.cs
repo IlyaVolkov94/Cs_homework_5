@@ -2,7 +2,7 @@
 // Сохранить эту инфу в отдельный массив и вывести на экран с пояснениями.
 // Найти медианное значение первоначалального массива , возможно придется кое-что для этого дополнительно выполнить.
 
-int[] FillRandomArray(int value)  //Создает произвольно заполненный массив
+int[] FillRandomArray(int value)
 {
     int[] Array = new int[value];
     for (int i = 0; i < value; i++)
@@ -42,14 +42,14 @@ double[] InfoArray(int[] value, int[] array)
     double average = 0;
     for (int i = 0; i <= 1; i++)
     {
-        infoArray[i] = value[i];
+        infoArray[i] = value[i];    //Записал максимально и минимальное значение.
         for (int j = 0; j < array.Length; j++)
         {
-            if (i == 1) average += array[j];
-            if (infoArray[i] == array[j]) infoArray[i + 2] = j;
+            if (i == 1) average += array[j];    //На последней итерации внешнего цикла проссуммировал все элементы массива.
+            if (infoArray[i] == array[j]) infoArray[i + 2] = j; //Записал индексы максимального и минимального элементов.
         }
     }
-    infoArray[infoArray.Length - 1] = Math.Round(average / array.Length, 2);
+    infoArray[infoArray.Length - 1] = Math.Round(average / array.Length, 2);    //Записываем среднее арифметическое
     return infoArray;
 }
 
@@ -84,20 +84,20 @@ void PrintMedian(int[] array)
 
 try
 {
-Console.WriteLine("Введите размер массива");
-int sizeArray = Convert.ToInt32(Console.ReadLine());
-int[] bufArray = new int[sizeArray];
-bufArray = FillRandomArray(sizeArray);
-int[] sortArray = SortArray(bufArray);
-int[] MaxAndMin = new int[2];
-MaxAndMin[0] = sortArray[0];
-MaxAndMin[1] = sortArray[sortArray.Length - 1];
-PrintInfo(
-    InfoArray(
-        MaxAndMin, bufArray
-    )
-);
-PrintMedian(sortArray);
+    Console.WriteLine("Введите размер массива");
+    int sizeArray = Convert.ToInt32(Console.ReadLine());
+    int[] bufArray = new int[sizeArray];
+    bufArray = FillRandomArray(sizeArray);
+    int[] sortArray = SortArray(bufArray);
+    int[] MaxAndMin = new int[2];
+    MaxAndMin[0] = sortArray[0];
+    MaxAndMin[1] = sortArray[sortArray.Length - 1];
+    PrintInfo(
+        InfoArray(
+            MaxAndMin, bufArray
+        )
+    );
+    PrintMedian(sortArray);
 }
 
 catch
