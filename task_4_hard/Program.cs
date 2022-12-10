@@ -82,6 +82,8 @@ void PrintMedian(int[] array)
     }
 }
 
+try
+{
 Console.WriteLine("Введите размер массива");
 int sizeArray = Convert.ToInt32(Console.ReadLine());
 int[] bufArray = new int[sizeArray];
@@ -96,3 +98,9 @@ PrintInfo(
     )
 );
 PrintMedian(sortArray);
+}
+
+catch
+{
+    Console.WriteLine("Ошибка выполнения");
+}
