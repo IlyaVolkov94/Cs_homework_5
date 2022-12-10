@@ -47,7 +47,7 @@ int[] SortArray(int[] array)
 }
 
 void PrintArray(int[] array)
-{   
+{
     for (int i = 0; i < array.Length; i++)
     {
         Console.Write(array[i] + " ");
@@ -61,21 +61,29 @@ int[] MixArray(int[] array)
     int[] firstIndexes = FillRandomArray(arraySize);
     int[] secondIndexes = FillRandomArray(arraySize);
     int[] mixArray = new int[arraySize];
-    for(int i=0; i<arraySize;i++)
+    for (int i = 0; i < arraySize; i++)
     {
-        mixArray[secondIndexes[i]]=array[firstIndexes[i]];
+        mixArray[secondIndexes[i]] = array[firstIndexes[i]];
     }
     return mixArray;
 }
 
-Console.WriteLine("Введите размер массива");
-int arraySize = Convert.ToInt32(Console.ReadLine());
-int[] bufArray = FillRandomArray(arraySize);
-Console.WriteLine("Рандомный массив:");
-PrintArray(bufArray);
-bufArray = SortArray(bufArray);
-Console.WriteLine("Отсортированный массив:");
-PrintArray(bufArray);
-bufArray = MixArray(bufArray);
-Console.WriteLine("Переменашанный массив:");
-PrintArray(bufArray);
+try
+{
+    Console.WriteLine("Введите размер массива");
+    int arraySize = Convert.ToInt32(Console.ReadLine());
+    int[] bufArray = FillRandomArray(arraySize);
+    Console.WriteLine("Рандомный массив:");
+    PrintArray(bufArray);
+    bufArray = SortArray(bufArray);
+    Console.WriteLine("Отсортированный массив:");
+    PrintArray(bufArray);
+    bufArray = MixArray(bufArray);
+    Console.WriteLine("Переменашанный массив:");
+    PrintArray(bufArray);
+}
+
+catch
+{
+    Console.WriteLine("Ошибка выполенения");
+}
