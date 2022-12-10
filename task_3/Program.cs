@@ -1,6 +1,6 @@
 ﻿//  Задайте массив вещественных чисел. Найдите разницу между максимальным и минимальным элементов массива.
 
-double[] FillRandomArray(int Arg)  //Создает произвольно заполненный массив
+double[] FillRandomArray(int Arg)
 {
     double[] Array = new double[Arg];
     for (int i = 0; i < Arg; i++)
@@ -12,7 +12,7 @@ double[] FillRandomArray(int Arg)  //Создает произвольно за�
     return Array;
 }
 
-double DiffMaxMinArray(double[] Array)  //Посчитывает сумму нечетных чисел
+double DiffMaxMinArray(double[] Array)
 {
     double Max = Array[0];
     double Min = Array[0];
