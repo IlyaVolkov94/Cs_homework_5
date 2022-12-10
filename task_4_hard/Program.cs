@@ -80,7 +80,6 @@ void PrintMedian(int[] array)
         double Median = (double)(array[indexMedian] + array[indexMedian - 1]) / 2;
         Console.WriteLine("Медианное значение: " + Math.Round(Median, 2));    //Отображаем сумму двух центральных элементов массива
     }
-
 }
 
 Console.WriteLine("Введите размер массива");
