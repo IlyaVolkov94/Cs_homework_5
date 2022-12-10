@@ -83,9 +83,9 @@ void PrintMedian(int[] array)
 }
 
 Console.WriteLine("Введите размер массива");
-int Size = Convert.ToInt32(Console.ReadLine());
-int[] bufArray = new int[Size];
-bufArray = FillRandomArray(Size);
+int sizeArray = Convert.ToInt32(Console.ReadLine());
+int[] bufArray = new int[sizeArray];
+bufArray = FillRandomArray(sizeArray);
 int[] sortArray = SortArray(bufArray);
 int[] MaxAndMin = new int[2];
 MaxAndMin[0] = sortArray[0];
